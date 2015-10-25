@@ -49,6 +49,10 @@
 
 					broadcastMsg: function(e){
 						e.preventDefault();
+						if($("#submitBox").val().trim()=="") {
+							return false;
+						}
+
 						socket.emit('sendMsg', {userId: socket.id, msg: $("#submitBox").val()})	
 						$("#submitBox").val("");
 					},
@@ -101,6 +105,7 @@
 						<div>
 							<form className="form-inline">
 								<div className="form-group">
+								    <label>Username</label>
 								    <input type="text" defaultValue="Anonymous" onChange={this.props.updateNick} id="nick" className="form-control" placeholder="NickName" />
 								</div>
 							</form>
