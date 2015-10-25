@@ -9,5 +9,8 @@ A simple chat room made using react, nodejs and socket.io
 
 visit http://localhost:3000 and start chating :)
 
+##Demo##
+http://aliarshad.info:8080/
+
 ##Author##
  Ali Arshad www.aliarshad.info
